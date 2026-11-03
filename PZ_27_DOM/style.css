@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   background: #edf3fa;
@@ -10,6 +11,7 @@ body {
     Arial,
     sans-serif;
 }
+
 .container {
   max-width: 820px;
   margin: 50px auto;
@@ -18,22 +20,27 @@ body {
   border-radius: 18px;
   box-shadow: 0 16px 45px #17446d20;
 }
+
 h1 {
   margin-top: 0;
   color: #1267a8;
 }
+
 .intro {
   color: #60758b;
 }
+
 label {
   display: block;
   font-weight: 650;
   margin: 20px 0 8px;
 }
+
 .form-row {
   display: flex;
   gap: 10px;
 }
+
 input {
   flex: 1;
   min-width: 0;
@@ -42,6 +49,7 @@ input {
   padding: 12px;
   font: inherit;
 }
+
 button {
   background: #166eaf;
   color: white;
@@ -50,13 +58,16 @@ button {
   padding: 10px 13px;
   cursor: pointer;
 }
+
 button:hover {
   background: #0b507f;
 }
+
 #task-list {
   list-style: none;
   padding: 0;
 }
+
 .task {
   display: flex;
   gap: 12px;
@@ -67,36 +78,44 @@ button:hover {
   border: 1px solid #d6e1ed;
   border-radius: 10px;
 }
+
 .actions {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
 }
+
 .actions button {
   font-size: 13px;
 }
+
 .task.done .task-text {
   text-decoration: line-through;
   color: #8294a6;
 }
+
 #error {
   color: #ad3249;
   min-height: 1em;
 }
+
 #stats {
   font-weight: 700;
   margin-top: 25px;
 }
+
 @media (max-width: 620px) {
   .container {
     margin: 0;
     padding: 18px;
     border-radius: 0;
   }
+
   .task {
     align-items: flex-start;
     flex-direction: column;
   }
+
   .form-row {
     flex-direction: column;
   }
