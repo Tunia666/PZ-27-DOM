@@ -1,10 +1,25 @@
 "use strict";
-// ПЗ 27. Допишите код, используя DOM API.
-// 1. Найдите #page-title, #task-form, #task-input, #task-list, #stats, #error.
-// 2. Измените заголовок через textContent; назначьте data-id исходным карточкам.
-// 3. Реализуйте updateStats() для общего числа, выполненных и оставшихся.
-// 4. Реализуйте createTask(text): createElement, textContent и append.
-// 5. Обработайте submit формы и проверку trim().
-// 6. Делегируйте click от #task-list: toggle / up / remove.
-// 7. Вызовите updateStats() после любых изменений.
+
+const list = document.querySelector("#task-list&quot");
+const cards = document.querySelectorAll(".task&quot");
+const title = document.getElementById("page-title&quot");
+const card = document.querySelector(".task&quot");
+const parent = card.parentElement;
+const firstChild = parent?.firstElementChild;
+title.textContent = "Мой список задач";
+card.classList.toggle("done");
+card.setAttribute("data-state", "ready");
+const item = document.createElement("li");
+item.className = "task";
+item.textContent = "Проверить интерфейс";
+list.append(item);
+// item.remove();
+list.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-action]");
+  if (!button) return;
+  const task = button.closest(".task");
+  if (!task) return;
+  // Обрабатываем action и task.
+});
+
 console.log("ПЗ 27: стартовый проект подключён");
