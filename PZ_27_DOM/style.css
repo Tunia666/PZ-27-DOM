@@ -53,6 +53,34 @@ button {
 button:hover {
   background: #0b507f;
 }
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.list-header h2 {
+  margin: 0;
+}
+.filters {
+  display: flex;
+  gap: 6px;
+}
+.filter-btn {
+  background: #e1ecf7;
+  color: #18314a;
+  font-size: 14px;
+  padding: 7px 12px;
+}
+.filter-btn:hover {
+  background: #c8ddf2;
+}
+.filter-btn.active {
+  background: #166eaf;
+  color: #ffffff;
+}
 #task-list {
   list-style: none;
   padding: 0;
@@ -66,6 +94,9 @@ button:hover {
   padding: 15px;
   border: 1px solid #d6e1ed;
   border-radius: 10px;
+}
+.task.hidden {
+  display: none;
 }
 .actions {
   display: flex;
