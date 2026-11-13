@@ -11,7 +11,7 @@
     <main class="container">
       <h1 id="page-title">Задачи на сегодня</h1>
       <p class="intro">Управляйте задачами без перезагрузки страницы</p>
-      <form id="task-form">
+      <form id="task-form" novalidate>
         <label for="task-input">Новая задача</label>
         <div class="form-row">
           <input
@@ -24,7 +24,20 @@
         <p id="error" role="alert"></p>
       </form>
       <section aria-label="Список задач">
-        <h2>Список</h2>
+        <div class="list-header">
+          <h2>Список</h2>
+          <div class="filters" role="group" aria-label="Фильтр задач">
+            <button type="button" class="filter-btn active" data-filter="all">
+              Все
+            </button>
+            <button type="button" class="filter-btn" data-filter="active">
+              Активные
+            </button>
+            <button type="button" class="filter-btn" data-filter="done">
+              Выполненные
+            </button>
+          </div>
+        </div>
         <ul id="task-list">
           <li class="task">
             <span class="task-text">Изучить структуру DOM</span>
